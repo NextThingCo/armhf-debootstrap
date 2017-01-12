@@ -1,3 +1,5 @@
+image: computermouth/sudeb
+
 before_script:
   - sudo apt-get update -qq
 
