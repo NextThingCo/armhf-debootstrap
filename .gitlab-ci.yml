@@ -1,0 +1,12 @@
+image: computermouth/sudeb
+
+before_script:
+  - sudo apt-get update -qq
+
+setup:
+  script:
+    - ./setup.sh
+    - ./build.sh -a
+  artifacts:
+    paths:
+      - rootfs.tar.gz
