@@ -7,8 +7,8 @@ setup:
   script:
     - ./setup.sh
     - sudo apt-get install -y binfmt-support
+    - sudo update-binfmts --enable
     - sudo update-binfmts --enable qemu-arm
-    - systemctl status binfmt-support
     - ./build.sh -a
   artifacts:
     paths:
