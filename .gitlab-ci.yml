@@ -8,6 +8,9 @@ setup:
     - ./setup.sh
     - sudo apt-get install -y binfmt-support
     - sudo update-binfmts --enable qemu-arm
+    - ls /proc/sys/fs
+    - ls /proc/sys/fs/binfmt_misc
+    - cat /proc/sys/fs/binfmt_misc/qemu-arm
     - ./build.sh -i
     - ./build.sh -a
   artifacts:
